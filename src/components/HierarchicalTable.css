@@ -1,0 +1,29 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table__header {
+  background-color: #f2f2f2;
+}
+
+.table__row {
+  padding: 10px;
+}
+
+.table__row-input {
+  padding: 10px;
+  width: 90%;
+}
+
+.table__row-align {
+  text-align: center;
+}
+
+.updateValue__button {
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
