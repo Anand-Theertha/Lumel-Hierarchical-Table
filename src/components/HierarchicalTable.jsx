@@ -61,15 +61,6 @@ const HierarchicalTable = ({ data }) => {
     setRows(updatedRows);
   };
 
-  const updateOriginalValues = (rows) => {
-    return rows.map((row) => {
-      if (row.children) {
-        return { ...row, children: updateOriginalValues(row.children) };
-      }
-      return { ...row, originalValue: row.value };
-    });
-  };
-
   const calculateVariance = (row) => {
     const variance =
       ((row.value - row.originalValue) / row.originalValue) * 100;
@@ -167,9 +158,6 @@ const HierarchicalTable = ({ data }) => {
           </tr>
         </tbody>
       </table>
-      <button onClick={() => setRows(updateOriginalValues(rows))}>
-        Reset Variance
-      </button>
     </div>
   );
 };
